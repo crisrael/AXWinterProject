@@ -1,0 +1,10 @@
+﻿/*---------- Main Menu ----------*/
+.container {
+    padding: 0 15px 15px 15px;
+}
+
+@media only screen and (min-width : 768px) {
+    .form-control.dropdown {width:200px;}
+    .form-control.text {width:400px;}
+}
+/*------- End Main Menu --------*/
