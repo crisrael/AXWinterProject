@@ -1,0 +1,46 @@
+/*---------- Universal ----------*/
+body {
+    background-color:lightgray !important;
+}
+.form-signin {
+    max-width: 330px;
+    margin: 0px auto;
+}
+
+.ItemID, .OwnerID {
+    display: inline-block;
+}
+/*-------- End Universal --------*/
+
+/*---------- Main Menu ----------*/
+.container {
+    padding: 0 15px 15px 15px;
+	width: auto !Important
+}
+.clockbox {
+    padding: 0 15px 0 15px;
+}
+.nav.navbar-nav.navbar-right {
+    padding: 15px 0 15px 0;
+    text-align: center;
+    display:none;
+}
+.navbar-brand {
+    background:url(../images/axlogo.jpg)
+    
+}
+/*------- End Main Menu --------*/
+
+/*----------- Mobile -----------*/
+@media only screen and (min-width : 768px) {
+    /*---- Universal ----*/
+    table {
+        
+    }
+
+    /*---- Main Menu ----*/
+    .form-control.dropdown {width:200px;}
+    .form-control.text {width:400px;}
+    .nav.navbar-nav.navbar-right {display:block;}
+}
+/*--------- End Mobile ---------*/
