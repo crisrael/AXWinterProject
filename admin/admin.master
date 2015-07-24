@@ -1,0 +1,53 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin_admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin</title>
+    
+    <!-- Force scalling on high resolution devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- include latest JQuery from google servers -->
+    <script src="../includes/scripts/jquery-1.11.2.min.js"></script>
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="../includes/styles/bootstrap.min.css" />
+
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <script src="../includes/scripts/bootstrap.min.js"></script>
+
+    <!-- Include external files -->
+    <link href="../includes/styles/mainsite.css" rel="stylesheet" />
+    <script src="../includes/scripts/liveClock.js"></script>
+</head>
+<body onload="form.reset();">
+    <!-- Include Menu -->
+    <!-- #include virtual = ../menu.html -->
+    <!-- Include Admin Menu -->
+    <!-- #include virtual = adminMenu.html -->
+
+    <asp:ContentPlaceHolder id="adminContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+
+    <script>
+        $(document).ready(function () {
+            //Highlight the correct tab
+            $("#" + (window.location.pathname.split("/").pop()).split(".")[0] + "Tab").addClass('active');
+        });
+
+        function displayMessage(message) {
+            var confirmValue = document.createElement("input");
+            confirmValue.type = "hidden";
+            confirmValue.name = "confirmValue";
+
+            if (confirm(message))
+                confirmValue.value = true;
+            else
+                confirmValue.value = false;
+
+            document.forms[0].appendChild(confirmValue);
+        }
+    </script>
+</body>
+</html>
